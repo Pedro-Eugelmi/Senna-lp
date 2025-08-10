@@ -1,0 +1,525 @@
+// Screens
+
+$screens: (
+  'sm': 576,
+  'md': 768,
+  'lg': 992,
+  'xl': 1200
+);
+
+// Paddings
+
+$paddings: 0, 1, 2, 4, 5, 8, 10, 12, 16, 20, 24, 28,30 ,32, 36, 40, 48, 50, 56, 60, 64, 80, 96, 100, 112, 120;
+
+// Margins
+
+$margins: 0, 1, 2, 4, 5, 8, 10, 12, 16, 20, 24, 28, 30, 32, 36, 40, 48, 56, 60, 64, 80, 96, 112, 120;
+
+// Gaps
+
+$gaps: 0, 1, 2, 4, 6, 8, 10, 12, 16, 20, 24, 28, 30, 32, 36, 40, 48, 56, 64, 80, 96, 112, 120;
+
+// Rounding
+
+$rounding: 0, 1, 2, 4, 8, 10, 12, 16, 20, 24, 25, 28, 32, 36, 40, 48, 56, 64, 80, 96, 112, 120;
+
+
+// Padding
+
+.p {
+
+  @each $padding in $paddings {
+
+    &-#{$padding} {
+      padding: #{$padding}px !important;
+    }
+  }
+
+  @each $key, $screen in $screens {
+
+    @media (min-width: #{$screen}px) {
+
+      @each $padding in $paddings {
+
+        &-#{$padding}-#{$key}-over {
+          padding: #{$padding}px !important;
+        }
+      }
+    }
+
+    @media (max-width: #{$screen}px) {
+
+      @each $padding in $paddings {
+
+        &-#{$padding}-#{$key}-less {
+          padding: #{$padding}px !important;
+        }
+      }
+    }
+  }
+}
+
+.py {
+
+  @each $padding in $paddings {
+
+    &-#{$padding} {
+      padding: #{$padding}px 0 !important;
+    }
+  }
+
+  @each $key, $screen in $screens {
+
+    @media (min-width: #{$screen}px) {
+
+      @each $padding in $paddings {
+
+        &-#{$padding}-#{$key}-over {
+          padding: #{$padding}px 0 !important;
+        }
+      }
+    }
+
+    @media (max-width: #{$screen}px) {
+
+      @each $padding in $paddings {
+
+        &-#{$padding}-#{$key}-less {
+          padding: #{$padding}px 0 !important;
+        }
+      }
+    }
+  }
+}
+
+.px {
+
+  @each $padding in $paddings {
+
+    &-#{$padding} {
+      padding: 0 #{$padding}px !important;
+    }
+  }
+
+  @each $key, $screen in $screens {
+
+    @media (min-width: #{$screen}px) {
+
+      @each $padding in $paddings {
+
+        &-#{$padding}-#{$key}-over {
+          padding: 0 #{$padding}px !important;
+        }
+      }
+    }
+
+    @media (max-width: #{$screen}px) {
+
+      @each $padding in $paddings {
+
+        &-#{$padding}-#{$key}-less {
+          padding: 0 #{$padding}px !important;
+        }
+      }
+    }
+  }
+}
+
+.pt {
+
+  @each $padding in $paddings {
+
+    &-#{$padding} {
+      padding-top: #{$padding}px !important;
+    }
+  }
+
+  @each $key, $screen in $screens {
+
+    @media (min-width: #{$screen}px) {
+
+      @each $padding in $paddings {
+
+        &-#{$padding}-#{$key}-over {
+          padding-top: #{$padding}px !important;
+        }
+      }
+    }
+
+    @media (max-width: #{$screen}px) {
+
+      @each $padding in $paddings {
+
+        &-#{$padding}-#{$key}-less {
+          padding-top: #{$padding}px !important;
+        }
+      }
+    }
+  }
+}
+
+.pr {
+
+  @each $padding in $paddings {
+
+    &-#{$padding} {
+      padding-right: #{$padding}px !important;
+    }
+  }
+
+  @each $key, $screen in $screens {
+
+    @media (min-width: #{$screen}px) {
+
+      @each $padding in $paddings {
+
+        &-#{$padding}-#{$key}-over {
+          padding-right: #{$padding}px !important;
+        }
+      }
+    }
+
+    @media (max-width: #{$screen}px) {
+
+      @each $padding in $paddings {
+
+        &-#{$padding}-#{$key}-less {
+          padding-right: #{$padding}px !important;
+        }
+      }
+    }
+  }
+}
+
+.pb {
+
+  @each $padding in $paddings {
+
+    &-#{$padding} {
+      padding-bottom: #{$padding}px;
+    }
+  }
+
+  @each $key, $screen in $screens {
+
+    @media (min-width: #{$screen}px) {
+
+      @each $padding in $paddings {
+
+        &-#{$padding}-#{$key}-over {
+          padding-bottom: #{$padding}px;
+        }
+      }
+    }
+
+    @media (max-width: #{$screen}px) {
+
+      @each $padding in $paddings {
+
+        &-#{$padding}-#{$key}-less {
+          padding-bottom: #{$padding}px;
+        }
+      }
+    }
+  }
+}
+
+.pl {
+
+  @each $padding in $paddings {
+
+    &-#{$padding} {
+      padding-left: #{$padding}px;
+    }
+  }
+
+  @each $key, $screen in $screens {
+
+    @media (min-width: #{$screen}px) {
+
+      @each $padding in $paddings {
+
+        &-#{$padding}-#{$key}-over {
+          padding-left: #{$padding}px;
+        }
+      }
+    }
+
+    @media (max-width: #{$screen}px) {
+
+      @each $padding in $paddings {
+
+        &-#{$padding}-#{$key}-less {
+          padding-left: #{$padding}px;
+        }
+      }
+    }
+  }
+}
+
+// Margin
+.m {
+
+  @each $margin in $margins {
+
+    &-#{$margin} {
+      margin: #{$margin}px !important;
+    }
+  }
+
+  @each $key, $screen in $screens {
+
+    @media (min-width: #{$screen}px) {
+
+      @each $margin in $margins {
+
+        &-#{$margin}-#{$key}-over {
+          margin: #{$margin}px !important;
+        }
+      }
+    }
+
+    @media (max-width: #{$screen}px) {
+
+      @each $margin in $margins {
+
+        &-#{$margin}-#{$key}-less {
+          margin: #{$margin}px !important;
+        }
+      }
+    }
+  }
+}
+
+.my {
+
+  @each $margin in $margins {
+
+    &-#{$margin} {
+      margin: #{$margin}px 0 !important;
+    }
+  }
+
+  @each $key, $screen in $screens {
+
+    @media (min-width: #{$screen}px) {
+
+      @each $margin in $margins {
+
+        &-#{$margin}-#{$key}-over {
+          margin: #{$margin}px 0 !important;
+        }
+      }
+    }
+
+    @media (max-width: #{$screen}px) {
+
+      @each $margin in $margins {
+
+        &-#{$margin}-#{$key}-less {
+          margin: #{$margin}px 0 !important;
+        }
+      }
+    }
+  }
+}
+
+.mx {
+
+  @each $margin in $margins {
+
+    &-#{$margin} {
+      margin: 0 #{$margin}px !important;
+    }
+  }
+
+  @each $key, $screen in $screens {
+
+    @media (min-width: #{$screen}px) {
+
+      @each $margin in $margins {
+
+        &-#{$margin}-#{$key}-over {
+          margin: 0 #{$margin}px !important;
+        }
+      }
+    }
+
+    @media (max-width: #{$screen}px) {
+
+      @each $margin in $margins {
+
+        &-#{$margin}-#{$key}-less {
+          margin: 0 #{$margin}px !important;
+        }
+      }
+    }
+  }
+}
+
+.mt {
+
+  @each $margin in $margins {
+
+    &-#{$margin} {
+      margin-top: #{$margin}px !important;
+    }
+  }
+
+  @each $key, $screen in $screens {
+
+    @media (min-width: #{$screen}px) {
+
+      @each $margin in $margins {
+
+        &-#{$margin}-#{$key}-over {
+          margin-top: #{$margin}px !important;
+        }
+      }
+    }
+
+    @media (max-width: #{$screen}px) {
+
+      @each $margin in $margins {
+
+        &-#{$margin}-#{$key}-less {
+          margin-top: #{$margin}px !important;
+        }
+      }
+    }
+  }
+}
+
+.mr {
+
+  @each $margin in $margins {
+
+    &-#{$margin} {
+      margin-right: #{$margin}px !important;
+    }
+  }
+
+  @each $key, $screen in $screens {
+
+    @media (min-width: #{$screen}px) {
+
+      @each $margin in $margins {
+
+        &-#{$margin}-#{$key}-over {
+          margin-right: #{$margin}px !important;
+        }
+      }
+    }
+
+    @media (max-width: #{$screen}px) {
+
+      @each $margin in $margins {
+
+        &-#{$margin}-#{$key}-less {
+          margin-right: #{$margin}px !important;
+        }
+      }
+    }
+  }
+}
+
+.mb {
+
+  @each $margin in $margins {
+
+    &-#{$margin} {
+      margin-bottom: #{$margin}px !important;
+    }
+  }
+
+  @each $key, $screen in $screens {
+
+    @media (min-width: #{$screen}px) {
+
+      @each $margin in $margins {
+
+        &-#{$margin}-#{$key}-over {
+          margin-bottom: #{$margin}px !important;
+        }
+      }
+    }
+
+    @media (max-width: #{$screen}px) {
+
+      @each $margin in $margins {
+
+        &-#{$margin}-#{$key}-less {
+          margin-bottom: #{$margin}px !important;
+        }
+      }
+    }
+  }
+}
+
+.ml {
+
+  @each $margin in $margins {
+
+    &-#{$margin} {
+      margin-left: #{$margin}px !important;
+    }
+  }
+
+  @each $key, $screen in $screens {
+
+    @media (min-width: #{$screen}px) {
+
+      @each $margin in $margins {
+
+        &-#{$margin}-#{$key}-over {
+          margin-left: #{$margin}px !important;
+        }
+      }
+    }
+
+    @media (max-width: #{$screen}px) {
+
+      @each $margin in $margins {
+
+        &-#{$margin}-#{$key}-less {
+          margin-left: #{$margin}px !important;
+        }
+      }
+    }
+  }
+}
+
+// Gap
+
+.gap {
+
+    @each $gap in $gaps {
+  
+      &-#{$gap} {
+        gap: #{$gap}px;
+      }
+    }
+  
+    @each $key, $screen in $screens {
+  
+      @media (min-width: #{$screen}px) {
+  
+        @each $gap in $gaps {
+  
+          &-#{$gap}-#{$key}-over {
+            gap: #{$gap}px;
+          }
+        }
+      }
+  
+      @media (max-width: #{$screen}px) {
+  
+        @each $gap in $gaps {
+  
+          &-#{$gap}-#{$key}-less {
+            gap: #{$gap}px;
+          }
+        }
+      }
+    }
+  }

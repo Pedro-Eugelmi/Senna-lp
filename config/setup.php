@@ -24,3 +24,14 @@ add_action('wp_enqueue_scripts', 'theme_enqueue_scripts');
 // Remove tool bar
 
 add_filter('show_admin_bar', '__return_false');
+
+// add support for svg
+function sn_mime_types($mimes) {
+    $mimes['svg'] = 'image/svg+xml';
+    return $mimes;
+}
+add_filter('upload_mimes', 'sn_mime_types');
+
+// Remove Gutenberg
+
+add_filter('use_block_editor_for_post', '__return_false', 10);

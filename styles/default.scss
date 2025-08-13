@@ -11,6 +11,11 @@
     --gray: #565656;
 }
 
+button, input {
+    outline: none !important;
+    appearance: unset;
+}
+
 // colors
 .bg-main {
     background-color: var(--main);
@@ -27,6 +32,12 @@
 .text {
     font-size: 18px;
     color: var(--gray);
+}
+
+.page-title {
+    font-size: 52px;
+    color: var(--main);
+    font-weight: 700;
 }
 
 .fc-main {
@@ -78,6 +89,13 @@
     }
 }
 
+.mc4wp-response {
+    color: var(--white);
+}
+
+.mc4wp-success {
+    color: green !important;
+}
 
 // Global
 body {

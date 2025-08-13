@@ -24,6 +24,59 @@
             font-size: 14px;
         }
     }
+
+    &-mobile {
+        &-menu {
+            content: '';
+            position: fixed;
+            z-index: 9999;
+            background-color: rgba(0, 0, 0, 0.7);
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            visibility: hidden;
+            opacity: 0;
+            pointer-events: none;
+            transition: 0.3s;
+
+            &-content {  
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 80%;
+                height: 100%;
+                background-color: var(--main);
+                transform: translateX(100%);
+                transition: 0.3s;
+                border-start-start-radius: 20px;
+
+                hr {
+                    margin: 0;
+                    border-top: 2px solid var(--white);
+                }
+            }
+
+            &.active {
+                visibility: visible;
+                opacity: 1;
+                pointer-events: all;
+
+                .header-mobile-menu-content {
+                    transform: translateX(0);
+                }
+            }
+        }
+
+        &-links {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            color: var(--white);
+            font-size: 18px;
+            font-weight: 700;
+        }
+    }
 }   
 
 .banner {
@@ -35,6 +88,10 @@
     color: var(--white);
     text-align: center;
     line-height: 1.5;
+
+    @media (max-width: 720px) {
+        min-height: unset;
+    }
 
     &-title {
         font-size: 52px;
@@ -80,7 +137,7 @@
         z-index: 2;
         width: 100%;
         height: 100%;
-        background-color: rgba(0, 0, 0, 0.66);
+        background-color: rgba(0, 0, 0, 0.7);
         pointer-events: all;
     }
 }
@@ -98,6 +155,10 @@
     &-title {
         font-weight: 700;
         font-size: 18px;
+
+        @media (max-width: 720px) {
+            font-size: 14px;
+        }
     }
 
     &-desc {
@@ -144,6 +205,7 @@
 
     &-title {
         font-weight: 700;
+        font-size: 18px;
     }
 
     &-excerpt {
@@ -187,14 +249,6 @@
 
 .newsletter {
 
-    .mc4wp-form-fields {
-        display: flex;
-        flex-wrap: wrap;
-
-        .row {
-            width: 100%;
-        }
-    }
 
     &-input {
         background-color: #F2F2F2;
@@ -293,6 +347,110 @@
         @media (max-width: 768px) {
             flex-direction: column;
             justify-content: center;
+        }
+    }
+}
+
+.swiper-blog {
+    &-next, &-prev {
+        height: 40px;
+        width: 40px;
+        border: 1px solid var(--blue);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        svg {
+            fill: var(--blue);
+            transition: 0.3s;
+        }
+
+        &:hover {
+            background-color: var(--blue);
+
+            svg {
+                fill: var(--white);
+                background-color: var(--blue);
+            }
+        }
+    }
+}
+
+.blog {
+    &-header {
+        position: relative;
+        background-position: center;
+        background-size: cover;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 99;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        .page-title {
+            z-index: 99;
+            position: relative;
+            color: #fff;
+        }
+
+        &-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 9;
+            object-fit: cover;
+        }
+    }
+
+    &-search {
+        background-color: #F2F2F2;
+        width: 100%;
+        font-size: 18px;
+        box-sizing: border-box;
+        display: block;
+        height: 100%;
+        border-radius: var(--radius);
+        display: flex;
+        
+        &-input {
+            padding: 15px 40px;
+            width: 100%;
+            height: 100%;
+            display: block;
+            box-sizing: border-box;
+        }
+
+        &-submit {
+            padding: 20px;
+        }
+
+        &::placeholder {
+            opacity: 0.9;
+        }
+
+    }
+
+    &-categories {
+        &-link {
+            padding: 15px 20px;
+            background-color: var(--white);
+            border-radius: 20px;
+            transition: 0.3s;
+            font-size: 18px;
+            font-weight: 700;
+
+            &:hover {
+                opacity: 0.7;
+            }
         }
     }
 }

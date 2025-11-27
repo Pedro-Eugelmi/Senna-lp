@@ -14,6 +14,11 @@
 button, input {
     outline: none !important;
     appearance: unset;
+    box-shadow: none !important;
+
+    &:focus {
+        box-shadow: none !important;
+    }
 }
 
 // colors
@@ -27,6 +32,16 @@ button, input {
 .title {
     font-size: 32px;
     font-weight: 700;
+    line-height: 120%;
+}
+
+.title-2 {
+    font-size: 48px;
+    font-weight: 700;
+
+    @media(max-width: 720px) {
+        font-size: 36px;
+    }
 }
 
 .text {
@@ -112,4 +127,79 @@ a {
 
 h2 {
     line-height: 120%;
+}
+
+.slicky {
+    position: sticky;
+    top: 20px;
+}
+
+.editor {
+    white-space: pre-line;
+
+    img {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+        height: auto;
+    }
+
+    ul {
+        list-style: circle;
+    }
+
+    ol {
+        list-style: decimal;
+    }
+
+    li + li {
+        margin-top: 10px;
+    }
+
+    ul, ol {
+        margin-left: 20px;
+        margin-bottom: 20px;
+        white-space: normal;
+    }
+
+    blockquote {
+        margin: 20px;
+        padding: 10px;
+        border-left: 5px solid var(--gray);
+        background-color: var(--light);
+    }
+
+    p {
+        text-align: left;
+    }
+
+
+    h1, h2, h3, h4, h5, h6 {
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    h4 {
+        font-size: 18px;
+    }
+
+    strong {
+        font-weight: 700;
+    }
+
+    i {
+        font-style: italic;
+    }
 }

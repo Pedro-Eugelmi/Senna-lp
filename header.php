@@ -28,6 +28,7 @@
 
                 <nav class="col-8 p-20 d-none d-sm-flex justify-content-end align-items-center">
                     <ul class="header-links">
+                        <li class="header-link" ><a href="<?php echo site_url()."/blog" ?>">Blog</a></li>
                         <li class="header-link" ><a href="#">Criar conta</a></li>
                         <li><a class="button white" href="">Entrar</a></li>
                     </ul>
@@ -51,7 +52,7 @@
                     <ul class="header-mobile-links">
 
                         <li>
-                            <a href="">Blog</a>
+                            <a href="<?php echo site_url()."/blog" ?>">Blog</a>
                         </li>
 
                         <li>

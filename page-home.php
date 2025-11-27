@@ -30,17 +30,26 @@
         <section class="bg-main pitchbar">
             <div class="container">
                 <div class="row">
-                    <?php foreach ($pitchbar as $item): ?>
-                        <div class="col-12 col-sm-6 col-lg-3 d-flex gap-20 pb-20 pt-20">
-                            <img class="pitchbar-icon" src="<?php echo $item["icone"]?>" aria-hidden="true">
-                            
-                            <div class="pitchbar-content">
-                                <h2 class="pitchbar-title"><?php echo $item["titulo"]?></h2>
-                                <p class="pitchbar-desc mt-10"><?php echo $item["descricao"]?></p>
+                    <div class="swiper-pitchbar swiper">
+                        <div class="swiper-wrapper">
+
+                        <?php foreach ($pitchbar as $item): ?>
+
+                            <div class="swiper-slide d-flex gap-20 p-20">
+                                <img class="pitchbar-icon" src="<?php echo $item["icone"]?>" aria-hidden="true">
+                                
+                                <div class="pitchbar-content">
+                                    <h2 class="pitchbar-title"><?php echo $item["titulo"]?></h2>
+                                    <p class="pitchbar-desc mt-10"><?php echo $item["descricao"]?></p>
+                                </div>
+
                             </div>
 
+                        <?php endforeach; ?>
+
+
                         </div>
-                    <?php endforeach; ?>
+                    </div>
                 </div>
             </div>
         </section>
@@ -118,12 +127,12 @@
                         <h2 class="title fc-main">ÚLTIMOS POSTS</h2>
                     </div>
                     <div class="col-sm-4 p-20 d-flex justify-content-sm-end align-items-center gap-20">
-                        <button class="swiper-blog-next">
-                            <svg  xmlns="http://www.w3.org/2000/svg" width="24" height="24"  fill="currentColor" viewBox="0 0 24 24" ><!--Boxicons v3.0 https://boxicons.com | License  https://docs.boxicons.com/free--><path d="M11.79 6.29 6.09 12l5.7 5.71 1.42-1.42L9.91 13H18v-2H9.91l3.3-3.29z"></path></svg>                        
+                        <button class="swiper-blog-prev">
+                            <svg width="13" height="20" viewBox="0 0 13 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.155 0.488342L0.643341 10L10.155 19.5117L12.5117 17.155L5.35667 10L12.5117 2.84501L10.155 0.488342Z" fill="#353535"/></svg>
                         </button>
 
-                        <button class="swiper-blog-prev">
-                            <svg  xmlns="http://www.w3.org/2000/svg" width="24" height="24"  fill="#fff" viewBox="0 0 24 24" ><!--Boxicons v3.0 https://boxicons.com | License  https://docs.boxicons.com/free--><path d="M6 13h6v4l6-5-6-5v4H6z"></path></svg>
+                        <button class="swiper-blog-next">
+                            <svg width="13" height="20" viewBox="0 0 13 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.84502 19.5117L12.3567 9.99999L2.84502 0.488327L0.488359 2.84499L7.64336 9.99999L0.488359 17.155L2.84502 19.5117Z" fill="#353535"/></svg>
                         </button>
                     </div>
                 </div>
@@ -152,31 +161,10 @@
         </section>
     <?php endif; ?>
 
-    <section class="bg-black py-60 newsletter">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 p-20">
-                    <h2 class="newsletter-title">FAÇA PARTE DA NOSSA <strong>NEWSLETTER</strong></h2>
-                </div>
-
-                <div class="col-12 p-20">
-                    <?php echo do_shortcode("[mc4wp_form id=54]"); ?>
-                </div>
-            </div>
-        </div>
-    </section>
+    <?php include("includes/newsletter.php")?>
 
     <section class="bg-main py-60">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 py-20">
-                    <h2 class="social-title">
-                        FAÇA PARTE DA NOSSA REDE! <br>
-                        SIGA <a href="">@Senna</a>
-                    </h2>
-                </div>
-            </div>
-        </div>
+        <?php include("includes/instagram.php")?>
     </section>
 
 </main>

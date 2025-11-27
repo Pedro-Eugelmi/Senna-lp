@@ -25,7 +25,7 @@
                 <div class="col-12 d-flex justify-content-between align-items-center footer-bottom pt-20 pb-20">
                     <span class="footer-bottom-text">Todos os direitos reservados - <?php echo get_the_date('Y') ?></span>
 
-                    <a title="Ir para o site do IFSP campus Birigui" target="_blank" href="">
+                    <a title="Ir para o site do IFSP campus Birigui" target="_blank" href="https://bri.ifsp.edu.br/">
                         <img src="<?php echo get_template_directory_uri() ?>/assets/ifsp.png" alt="IFSP Birigui">
                     </a>
                 </div>

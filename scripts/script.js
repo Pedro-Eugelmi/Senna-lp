@@ -18,6 +18,22 @@ const swiperBlog = new Swiper (".swiper-blog.swiper", {
     }
 });
 
+const swiperPitchbar = new Swiper (".swiper-pitchbar.swiper", {
+    slidesPerView: 1,
+    loop: true,
+    autoplay: {
+        delay: 3000,
+    },
+    breakpoints: {
+        1192: {
+            slidesPerView: 4
+        },
+        720: {
+            slidesPerView: 2
+        }
+    }
+});
+
 // Clica no abrir menu
 $("#open-mobile-menu").on("click", function() {
 
@@ -51,3 +67,8 @@ function closeMenu() {
     $("#close-mobile-menu").attr("aria-expanded" , false);
     $("#mobile-menu").attr("aria-hidden", true);
 }
+
+
+$(".blog-categories-link").on("click", function(e) {
+    $("#blog-form").trigger("submit");
+});

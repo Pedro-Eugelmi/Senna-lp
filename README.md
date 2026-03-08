@@ -1,4 +1,4 @@
-# Pedro-Eugelmi | Marketing Landing Page for SENNA
+# Marketing Landing Page for SENNA
 
 A custom, high-performance WordPress theme originally developed as a college project. This theme is built as a conversion-focused Landing Page, featuring modular PHP architecture and automated asset optimization.
 
